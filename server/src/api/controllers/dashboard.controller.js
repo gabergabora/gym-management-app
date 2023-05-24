@@ -8,7 +8,7 @@ const Schedule = require("./../models/schedule");
 exports.getData = async (req, res) => {
   try {
     const today = new Date();
-    const day = today.getDay();
+    const day = today.getDay();        
     const monthDate = new Date(today.setMonth(today.getMonth() - 1));
 
     const membersCount = await Member.countDocuments({});
